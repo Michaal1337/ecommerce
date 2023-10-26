@@ -1,0 +1,23 @@
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.link-animation::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 1.5px;
+	width: 100%;
+	background-color: #088178;
+	transform: scaleX(0);
+	transform-origin: center;
+	transition: transform 0.3s ease-in;
+}
+
+.link-animation:hover::after {
+	transform: scaleX(1);
+	transform-origin: center;
+}

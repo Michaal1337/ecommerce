@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #333;
+  color: white;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.link-animation::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1.5px;
+  width: 100%;
+  background-color: #088178;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-in;
+}
+
+.link-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+/*
+&__links {
+		// position: fixed;
+
+		&-list {
+			display: flex;
+			align-items: center;
+			// flex-direction: row;
+		}
+		&-item {
+			position: relative;
+			// padding: 0 0.5em;
+			margin-right: 0.5em;
+			.active {
+				color: #088178;
+			}
+			a {
+				@include links;
+			}
+		}
+	}
+*/
+body {
+  font-family: "League Spartan", sans-serif;
+  overflow-x: hidden;
+}
+
+.header {
+  background-color: #e3e6f3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.nav {
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em;
+  height: 8vh;
+}
+.nav .nav-active {
+  transform: translateX(100%);
+}
+.nav__links {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  height: 92vh;
+  right: 0;
+  top: 8vh;
+  width: 100%;
+  transform: translateX(0);
+  transition: transform 0.5s;
+}
+.nav__links-list .basket {
+  display: none;
+}
+.nav__links-item {
+  text-align: center;
+  position: relative;
+  padding: 0.2em;
+  margin: 3em 0;
+}
+.nav__links-item .link-active {
+  color: #088178;
+}
+.nav__links-item a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s;
+}
+.nav__links-item a:hover {
+  color: #088178;
+}
+.nav__mobile {
+  display: flex;
+  align-items: center;
+}
+.nav__mobile .nav__shopping-icon .nav__shpopping-bag {
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s;
+  padding: 0.3em;
+  font-size: 2.7rem;
+}
+.nav__mobile .nav__shopping-icon .nav__shpopping-bag:hover {
+  color: #088178;
+}
+.nav__mobile .nav__toggle {
+  cursor: pointer;
+}
+.nav__mobile .nav__toggle span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: #333;
+  transition: all 0.3s;
+}
+.nav__mobile .nav__toggle .active-line {
+  background-color: #088178;
+}
+.nav__mobile .nav__toggle .active-line:nth-child(1) {
+  transform-origin: center right;
+  transform: rotate(-45deg);
+  width: 77%;
+}
+.nav__mobile .nav__toggle .active-line:nth-child(2) {
+  opacity: 0;
+}
+.nav__mobile .nav__toggle .active-line:nth-child(3) {
+  transform-origin: center right;
+  transform: rotate(45deg);
+  width: 77%;
+}/*# sourceMappingURL=style.css.map */

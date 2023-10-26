@@ -1,0 +1,32 @@
+@mixin links {
+	text-decoration: none;
+	font-weight: 500;
+	color: #333;
+	transition: color 0.3s;
+	&:hover {
+		color: #088178;
+	}
+}
+
+/*
+&__links {
+		// position: fixed;
+
+		&-list {
+			display: flex;
+			align-items: center;
+			// flex-direction: row;
+		}
+		&-item {
+			position: relative;
+			// padding: 0 0.5em;
+			margin-right: 0.5em;
+			.active {
+				color: #088178;
+			}
+			a {
+				@include links;
+			}
+		}
+	}
+*/

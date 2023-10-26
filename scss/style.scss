@@ -1,0 +1,101 @@
+@use './reset' as *;
+@use './colors' as *;
+@use './components' as *;
+@use './mixins' as *;
+
+body {
+	font-family: 'League Spartan', sans-serif;
+	overflow-x: hidden;
+}
+
+.header {
+	background-color: $Navbar;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.nav {
+	font-size: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5em 1em;
+	height: 8vh;
+
+	// &__logo {
+	// 	// color: white;
+	// }
+	.nav-active {
+		transform: translateX(100%);
+	}
+	&__links {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: red;
+		height: 92vh;
+		right: 0;
+		top: 8vh;
+		width: 100%;
+		transform: translateX(0);
+		transition: transform 0.5s;
+
+		&-list {
+			.basket {
+				display: none;
+			}
+		}
+		&-item {
+			text-align: center;
+			position: relative;
+			padding: 0.2em;
+			margin: 3em 0;
+			.link-active {
+				color: #088178;
+			}
+			a {
+				@include links;
+			}
+		}
+	}
+	&__mobile {
+		display: flex;
+		align-items: center;
+		.nav__shopping-icon {
+			.nav__shpopping-bag {
+				@include links;
+				padding: 0.3em;
+				font-size: 2.7rem;
+			}
+		}
+
+		.nav__toggle {
+			cursor: pointer;
+			span {
+				display: block;
+				width: 30px;
+				height: 3px;
+				margin: 5px 0;
+				background-color: #333;
+				transition: all 0.3s;
+			}
+			.active-line {
+				background-color: #088178;
+				&:nth-child(1) {
+					transform-origin: center right;
+					transform: rotate(-45deg);
+					width: 77%;
+				}
+				&:nth-child(2) {
+					opacity: 0;
+				}
+				&:nth-child(3) {
+					transform-origin: center right;
+					transform: rotate(45deg);
+					width: 77%;
+				}
+			}
+		}
+	}
+}
