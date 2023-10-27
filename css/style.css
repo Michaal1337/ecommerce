@@ -1,21 +1,3 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: #333;
-  color: white;
-}
-
 .wrapper {
   margin: 0 auto;
   width: 100%;
@@ -29,7 +11,7 @@ body {
   left: 0;
   height: 1.5px;
   width: 100%;
-  background-color: #088178;
+  background-color: rgb(0, 146, 197);
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease-in;
@@ -62,26 +44,45 @@ body {
 		}
 	}
 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "League Spartan", sans-serif;
   overflow-x: hidden;
+  background-color: #f9fcff;
 }
 
 .header {
-  background-color: #e3e6f3;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: center;
 }
 
 .nav {
+  position: fixed;
   font-size: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5em 1em;
   height: 8vh;
+  box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.1803921569);
+  background-color: #f9fcff;
+  z-index: 100;
 }
 .nav .nav-active {
-  transform: translateX(100%);
+  opacity: 1;
+  transform: translateX(0);
 }
 .nav__links {
   position: absolute;
@@ -89,13 +90,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: red;
   height: 92vh;
   right: 0;
   top: 8vh;
   width: 100%;
-  transform: translateX(0);
-  transition: transform 0.5s;
+  opacity: 0;
+  background-color: #f9fcff;
+  transform: translateX(100%);
+  transition: transform 0.5s, opacity 0.7s;
+  z-index: 100;
 }
 .nav__links-list .basket {
   display: none;
@@ -107,7 +110,7 @@ body {
   margin: 3em 0;
 }
 .nav__links-item .link-active {
-  color: #088178;
+  color: rgb(0, 146, 197);
 }
 .nav__links-item a {
   text-decoration: none;
@@ -116,7 +119,7 @@ body {
   transition: color 0.3s;
 }
 .nav__links-item a:hover {
-  color: #088178;
+  color: rgb(0, 146, 197);
 }
 .nav__mobile {
   display: flex;
@@ -131,7 +134,7 @@ body {
   font-size: 2.7rem;
 }
 .nav__mobile .nav__shopping-icon .nav__shpopping-bag:hover {
-  color: #088178;
+  color: rgb(0, 146, 197);
 }
 .nav__mobile .nav__toggle {
   cursor: pointer;
@@ -145,7 +148,7 @@ body {
   transition: all 0.3s;
 }
 .nav__mobile .nav__toggle .active-line {
-  background-color: #088178;
+  background-color: rgb(0, 146, 197);
 }
 .nav__mobile .nav__toggle .active-line:nth-child(1) {
   transform-origin: center right;
@@ -159,4 +162,93 @@ body {
   transform-origin: center right;
   transform: rotate(45deg);
   width: 77%;
+}
+
+.home {
+  background-color: #f9fcff;
+  position: relative;
+}
+.home .hero {
+  height: 100vh;
+  background-image: url("../img/woman-1280-remove.png");
+  background-size: cover;
+  background-position: center;
+}
+.home__title {
+  position: absolute;
+  right: 5%;
+  top: 15%;
+  max-width: 60%;
+  font-size: 2.8rem;
+  border-radius: 5px;
+  text-align: center;
+}
+.home__title h1 {
+  color: rgb(0, 146, 197);
+}
+.home__title h4 {
+  color: #333;
+}
+.home__title h6 {
+  color: #333;
+}
+.home__title > * {
+  margin-top: 0.3em;
+}
+.home__title button {
+  font-family: "League Spartan", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 0.8em;
+  padding: 0.5em 0.8em;
+  border: 3px solid black;
+  background-color: transparent;
+  outline: none;
+  transition: color 0.3s, border 0.3s;
+  cursor: pointer;
+}
+.home__title button:hover {
+  color: rgb(0, 146, 197);
+  border: 3px solid rgb(0, 146, 197);
+}
+
+.features {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position-y: 50%;
+  color: #f9fcff;
+  display: flex;
+  font-size: 2.8rem;
+  height: 30vh;
+  background-color: #f9fcff;
+}
+.features__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.333);
+}
+.features__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  z-index: 1;
+}
+.features__item h6 {
+  margin-top: 0.5em;
+}
+.features i {
+  text-shadow: 5px 5px 10px rgba(46, 46, 46, 0.1803921569);
+}
+
+.shop {
+  height: 100vh;
+  background-color: #f9fcff;
 }/*# sourceMappingURL=style.css.map */

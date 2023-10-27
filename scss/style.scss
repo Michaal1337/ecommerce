@@ -1,31 +1,53 @@
-@use './reset' as *;
 @use './colors' as *;
 @use './components' as *;
 @use './mixins' as *;
 
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	// scroll-padding-top: 50px;
+}
+
 body {
 	font-family: 'League Spartan', sans-serif;
 	overflow-x: hidden;
+	// background-color: $main-color-gray;
+	background-color: $bg-white;
 }
 
 .header {
-	background-color: $Navbar;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+	display: flex;
+	justify-content: center;
 }
 
 .nav {
+	position: fixed;
 	font-size: 2rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0.5em 1em;
 	height: 8vh;
+	box-shadow: $shadow;
+	// background-color: $white2;
+	background-color: $bg-white;
+
+	z-index: 100;
 
 	// &__logo {
 	// 	// color: white;
 	// }
 	.nav-active {
-		transform: translateX(100%);
+		opacity: 1;
+		transform: translateX(0);
 	}
 	&__links {
 		position: absolute;
@@ -33,13 +55,15 @@ body {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		background-color: red;
 		height: 92vh;
 		right: 0;
 		top: 8vh;
 		width: 100%;
-		transform: translateX(0);
-		transition: transform 0.5s;
+		opacity: 0;
+		background-color: $bg-white;
+		transform: translateX(100%);
+		transition: transform 0.5s, opacity 0.7s;
+		z-index: 100;
 
 		&-list {
 			.basket {
@@ -52,7 +76,7 @@ body {
 			padding: 0.2em;
 			margin: 3em 0;
 			.link-active {
-				color: #088178;
+				color: $color-hover;
 			}
 			a {
 				@include links;
@@ -81,7 +105,7 @@ body {
 				transition: all 0.3s;
 			}
 			.active-line {
-				background-color: #088178;
+				background-color: $color-hover;
 				&:nth-child(1) {
 					transform-origin: center right;
 					transform: rotate(-45deg);
@@ -98,4 +122,99 @@ body {
 			}
 		}
 	}
+}
+
+.home {
+	background-color: $bg-white;
+	position: relative;
+	.hero {
+		height: 100vh;
+		background-image: url('../img/woman-1280-remove.png');
+		// background-image: url('../img/shopping-mall-1280.jpg');
+		background-size: cover;
+		background-position: center;
+	}
+
+	&__title {
+		position: absolute;
+		right: 5%;
+		top: 15%;
+		max-width: 60%;
+		font-size: 2.8rem;
+		border-radius: 5px;
+		text-align: center;
+		h1 {
+			color: $color-hover;
+		}
+		h4 {
+			color: $main-color-dark;
+		}
+		h6 {
+			color: $main-color-dark;
+		}
+
+		& > * {
+			margin-top: 0.3em;
+		}
+
+		button {
+			font-family: 'League Spartan', sans-serif;
+			font-size: 2rem;
+			font-weight: 600;
+			margin-top: 0.8em;
+			padding: 0.5em 0.8em;
+			border: 3px solid black;
+			background-color: transparent;
+			outline: none;
+			transition: color 0.3s, border 0.3s;
+			cursor: pointer;
+
+			&:hover {
+				color: $color-hover;
+				border: 3px solid $color-hover;
+			}
+		}
+	}
+}
+
+.features {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	// background-image: url('../img/store-4156934_1280.png');
+	background-size: cover;
+	background-position-y: 50%;
+	color: $bg-white;
+	display: flex;
+	font-size: 2.8rem;
+	height: 30vh;
+	// background-color: $bg-color;
+	background-color: $bg-white;
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.333);
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		z-index: 1;
+		h6 {
+			margin-top: 0.5em;
+		}
+	}
+	i {
+		text-shadow: $shadow;
+	}
+}
+.shop {
+	height: 100vh;
+	background-color: $bg-white;
 }

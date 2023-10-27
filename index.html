@@ -8,10 +8,10 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <script src="https://kit.fontawesome.com/0936b243a2.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/0936b243a2.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 
@@ -20,13 +20,13 @@
 <body>
     <header id="header" class="header">
         <nav id="nav" class="nav wrapper">
-            <a href="index.html">
+            <a href="#home">
                 <p class="nav__logo">LOGO</p>
             </a>
-            <div class="nav__links nav-active">
+            <div class="nav__links">
                 <ul class="nav__links-list">
-                    <ul class="nav__links-item"><a class=" link-animation" href="">Home</a></ul>
-                    <ul class="nav__links-item link-animation"><a class="link-animation" href="">Shop</a></ul>
+                    <ul class="nav__links-item"><a class=" link-animation" href="#home">Home</a></ul>
+                    <ul class="nav__links-item link-animation"><a class="link-animation" href="#shop">Shop</a></ul>
                     <ul class="nav__links-item link-animation"><a class="link-animation" href="">News</a></ul>
                     <ul class="nav__links-item link-animation"><a class="link-animation" href="">About</a></ul>
                     <ul class="nav__links-item link-animation"><a class="link-animation" href="">Contact</a></ul>
@@ -49,11 +49,48 @@
         </nav>
     </header>
     <main>
-        <section id="home" class="home">
-            <h3>top brands</h3>
-            <h1>Midseason sales</h1>
-            <h4>selected products up to-30%</h4>
-            <a href=""><button>Shop Now</button></a>
+        <section id="home" class="home wrapper">
+            <!-- <div class="home__bg"></div> -->
+            <div class="hero"></div>
+            <div class="home__title">
+                <h4>Top brands</h4>
+                <h1>Midseason sales</h1>
+                <h6>Selected products up to -30%</h6>
+                <a href="#shop"><button>Shop Now</button></a>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="features__bg"></div>
+            <div class="features__item">
+                <i class="fa-solid fa-trophy"></i>
+                <h6>good quality</h6>
+            </div>
+            <div class="features__item">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h6>free shipping</h6>
+            </div>
+            <div class="features__item">
+                <i class="fa-solid fa-globe"></i>
+                <h6>online order</h6>
+            </div>
+            <div class="features__item">
+                <i class="fa-solid fa-sack-dollar"></i>
+                <h6>save money</h6>
+            </div>
+            <div class="features__item">
+                <i class="fa-solid fa-percent"></i>
+                <h6>sales</h6>
+            </div>
+            <div class="features__item">
+                <i class="fa-solid fa-phone"></i>
+                <h6>24/7 support</h6>
+            </div>
+
+        </section>
+
+        <section id="shop" class="shop">
+
         </section>
     </main>
 

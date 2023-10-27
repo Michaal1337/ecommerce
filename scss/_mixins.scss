@@ -1,10 +1,12 @@
+@use './colors' as *;
+
 @mixin links {
 	text-decoration: none;
 	font-weight: 500;
-	color: #333;
+	color: $main-color-dark;
 	transition: color 0.3s;
 	&:hover {
-		color: #088178;
+		color: $color-hover;
 	}
 }
 
