@@ -10,6 +10,14 @@
 	}
 }
 
+@mixin bgimg($url) {
+	// background-image: rgb(0,0,0,0.3), url($url);
+	background-image: $blue-gradient, url($url);
+	background-position: center;
+	background-size: cover;
+
+}
+
 /*
 &__links {
 		// position: fixed;

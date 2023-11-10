@@ -1,17 +1,21 @@
 // $Verydarkblue: hsl(238, 29%, 16%);
 $color-hover: rgb(0, 146, 197);
 $main-color-dark: #333;
+$main-color-gray: #606063;
 
+$blue-gradient: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 
 $light-shadow-white: 0 5px 15px rgb(255, 255, 255);
 $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 $shadow: 5px 5px 10px #2e2e2e2e;
 
+//#6f6f6f;
 $bg-white: #f9fcff;
 //rgb(248, 249, 250)
 $bg-light-gray: #dee4ea;
-$bg-light-gray2: #d7e1ec;
-
+$bg-gray: rgb(237, 239, 243);
+$bg-gray: rgb(241, 242, 243);
+$bg-gray2: #d7e1ec;
 // $silver: #d7e1ec;
 // $white: #f5f7fa;
 // $white: #ffffff;

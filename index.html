@@ -19,50 +19,56 @@
 
 <body>
     <header id="header" class="header">
-        <nav id="nav" class="nav wrapper">
-            <a href="#home">
-                <p class="nav__logo">LOGO</p>
-            </a>
-            <div class="nav__links">
-                <ul class="nav__links-list">
-                    <ul class="nav__links-item"><a class=" link-animation" href="#home">Home</a></ul>
-                    <ul class="nav__links-item link-animation"><a class="link-animation" href="#shop">Shop</a></ul>
-                    <ul class="nav__links-item link-animation"><a class="link-animation" href="">News</a></ul>
-                    <ul class="nav__links-item link-animation"><a class="link-animation" href="">About</a></ul>
-                    <ul class="nav__links-item link-animation"><a class="link-animation" href="">Contact</a></ul>
-                    <ul class="nav__links-item basket"><a href=""><i class='bx bx-shopping-bag'></i></a>
+        <nav id="nav" class="nav">
+            <div class="wrapper">
+                <a href="#home">
+                    <p class="nav__logo">LOGO</p>
+                </a>
+                <div class="nav__links">
+                    <ul class="nav__links-list">
+                        <ul class="nav__links-item"><a class=" link-animation" href="#home">Home</a></ul>
+                        <ul class="nav__links-item link-animation"><a class="link-animation" href="#shop">Shop</a></ul>
+                        <ul class="nav__links-item link-animation"><a class="link-animation" href="">News</a></ul>
+                        <ul class="nav__links-item link-animation"><a class="link-animation" href="">About</a></ul>
+                        <ul class="nav__links-item link-animation"><a class="link-animation" href="">Contact</a></ul>
+                        <ul class="nav__links-item basket"><a href=""><i class='bx bx-shopping-bag'></i></a>
+                        </ul>
                     </ul>
-                </ul>
-            </div>
-            <div class="nav__mobile">
-                <div class="nav__shopping-icon">
-                    <a class="nav__shpopping-bag" href=""><i class='bx bx-shopping-bag'></i></a>
-                    <span class="nav__shopping-quantity"></span>
                 </div>
-                <div class="nav__toggle">
-                    <span class="nav__toggle-line1"></span>
-                    <span class="nav__toggle-line2"></span>
-                    <span class="nav__toggle-line3"></span>
+                <div class="nav__mobile">
+                    <div class="nav__shopping-icon">
+                        <a class="nav__shpopping-bag" href="basket.html"><i class='bx bx-shopping-bag'></i></a>
+                        <span class="nav__shopping-quantity"></span>
+                    </div>
+                    <div class="nav__toggle">
+                        <span class="nav__toggle-line1"></span>
+                        <span class="nav__toggle-line2"></span>
+                        <span class="nav__toggle-line3"></span>
+                    </div>
                 </div>
+
             </div>
+
 
         </nav>
     </header>
     <main>
-        <section id="home" class="home wrapper">
-            <!-- <div class="home__bg"></div> -->
-            <div class="hero"></div>
-            <div class="home__title">
-                <h4>Top brands</h4>
-                <h1>Midseason sales</h1>
-                <h6>Selected products up to -30%</h6>
-                <a href="#shop"><button>Shop Now</button></a>
+        <section id="home" class="home">
+            <!-- <div class="hero"></div> -->
+            <div class="wrapper">
+                <div class="home__title">
+                    <h4>Top brands</h4>
+                    <h1>Midseason sale</h1>
+                    <h6>Selected products up to -30%</h6>
+                    <a href="#shop"><button class="btn">Shop Now</button></a>
+                </div>
             </div>
         </section>
 
         <section id="features" class="features">
-            <div class="features__bg"></div>
-            <div class="features__item">
+            <!-- <div class="features__bg"></div> -->
+            <h3>You will find something for yourself</h3>
+            <!-- <div class="features__item">
                 <i class="fa-solid fa-trophy"></i>
                 <h6>good quality</h6>
             </div>
@@ -85,18 +91,130 @@
             <div class="features__item">
                 <i class="fa-solid fa-phone"></i>
                 <h6>24/7 support</h6>
+            </div> -->
+
+        </section>
+
+        <section id="shop" class="shop section">
+            <h2 class="section-title">Featured <span class="section-span">products</span></h2>
+            <p class="shop__subtitle">New Collection</p>
+            <div class="shop__item-container">
+
+                <!-- <div class="shop__item">
+                    <img src="./img/hangers-1280.jpg" alt="" class="shop__item-img">
+                    <hr>
+                    <div class="shop__item-content">
+                        <div class="shop__item-rate">
+                            <i class="fas fa-star 
+                            shop__item-rate-star"></i>
+                            <i class="fas fa-star shop__item-rate-star"></i>
+                            <i class="fas fa-star shop__item-rate-star"></i>
+                            <i class="fas fa-star shop__item-rate-star"></i>
+                        </div>
+                        <p class="shop__item-title">title</p>
+                        <h4 class="shop__item-price">$10</h4>
+
+                        <a href="#cart"><a href=""><i class='bx bx-shopping-bag shop__item-bag'></i></a>
+                    </div>
+                </div> -->
+
+            </div>
+        </section>
+
+        <section id="news" class="news section">
+            <div class="wrapper">
+                <h2 class="section-title">News</h2>
+                <div class="news__content-top">
+                    <div class="news__content-item one top">
+                        <h5>Free shipping</h5>
+                        <h3>Buy 3 pieces & get free shipping</h3>
+                        <p>The best quality of all products</p>
+                        <button class="btn">Check it</button>
+                    </div>
+                    <div class="news__content-item two top">
+                        <h5>Elegant shirts</h5>
+                        <h3>Upcomming soon</h3>
+                        <p>for every occasion</p>
+                        <button class="btn">Check it</button>
+                    </div>
+                </div>
+                <div class="news__content-bottom">
+                    <div class="news__content-item three bot">
+                        <h3>SEASON SALE</h3>
+                        <h4>Winter Collection -50% OFF</h4>
+                    </div>
+                    <div class="news__content-item four bot">
+                        <h3>SEASON SALE</h3>
+                        <h4>Winter Collection -50% OFF</h4>
+                    </div>
+                    <div class="news__content-item five bot">
+                        <h3>SEASON SALE</h3>
+                        <h4>Winter Collection -50% OFF</h4>
+                    </div>
+                </div>
+
             </div>
 
         </section>
 
-        <section id="shop" class="shop">
-
+        <section id="newsletter" class="newsletter">
+            <div class="wrapper">
+                <h4>Sign Up For Newsletter</h4>
+                <p>Get e-mail updates about our latest shop and <span>special offers.</span></p>
+                <form action="">
+                    <input type="text" placeholder="Your email adress">
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
         </section>
     </main>
 
+    <footer id="footer" class="footer wrapper">
+        <div class="footer__contact">
+            <a href="#home"><img src="" alt="">LOGO</a>
+            <h3>Contact</h3>
+            <p><span>Adress:</span> 123 Main Street, New York, NY 10001, USA</p>
+            <p><span>Phone:</span> (212) 555-1234</p>
+            <p><span>Hours:</span> 10:00 - 18:00 Mon - Fri</p>
+            <h3>Follow Us</h3>
+            <div class="footer__contact-follow">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
 
-
-    <script src="./js/script.js"></script>
+        </div>
+        <div class="footer__about">
+            <h3>About</h3>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="footer__account">
+            <h3>My Account</h3>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="footer__app">
+            <h3>Install App</h3>
+            <p>From App Store or Google Play</p>
+            <div class="footer__app-img">
+                <a href=""><img src="./img/appstore.png" alt=""></a>
+                <a href=""><img src="./img/gplay.png" alt=""></a>
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="./img/payment.jpg" alt="">
+        </div>
+        <p class="footer__copyright">&copy <span>2023</span> Copyright. All Rights Reserved</p>
+    </footer>
+    <script src=" ./js/script.js">
+    </script>
 </body>
 
 </html>

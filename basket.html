@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/0936b243a2.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+
+<body>
+    <header id="header" class="header">
+        <nav id="nav" class="nav">
+            <div class="wrapper">
+                <a href="index.html">
+                    <p class="nav__logo">LOGO</p>
+                </a>
+                <div class="nav__links">
+                    <ul class="nav__links-list">
+                        <ul class="nav__links-item"><a class=" link-animation" href="#home">Home</a></ul>
+                        <ul class="nav__links-item link-animation"><a class="link-animation" href="#shop">Shop</a></ul>
+                        <ul class="nav__links-item link-animation"><a class="link-animation" href="">News</a></ul>
+                        <ul class="nav__links-item link-animation"><a class="link-animation" href="">About</a></ul>
+                        <ul class="nav__links-item link-animation"><a class="link-animation" href="">Contact</a></ul>
+                        <ul class="nav__links-item basket"><a href=""><i class='bx bx-shopping-bag'></i></a>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="nav__mobile">
+                    <div class="nav__shopping-icon">
+                        <a class="nav__shpopping-bag" href="basket.html"><i class='bx bx-shopping-bag'></i></a>
+                        <span class="nav__shopping-quantity"></span>
+                    </div>
+                    <div class="nav__toggle">
+                        <span class="nav__toggle-line1"></span>
+                        <span class="nav__toggle-line2"></span>
+                        <span class="nav__toggle-line3"></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="basket" class="basket section">
+            <h2>Your products</h2>
+            <div class="basket__interface">
+                <h4 class="p">total bill:</h4>
+                <div class="basket__btns">
+                    <button class="basket__btns-checkout">Checkout</button>
+                    <button class="basket__btns-clear">Clear Cart</button>
+                </div>
+            </div>
+            <div class="basket__products">
+                <article class="basket__item">
+                    <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
+                    <div class="basket__details">
+                        <div class="basket__details-title-price">
+                            <h4 class="text-overflow">title</h4>
+                            <p>$ 50</p>
+                            <i></i>
+                        </div>
+                        <div class="basket__details-btns">
+                            <i class="fa-solid fa-minus" onclick="decrement()"></i>
+                            <span data-id="1" class="basket__details-quantity">0</span>
+                            <i class="fa-solid fa-plus" onclick="increment()"></i>
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <h3 class="basket__details-total">$ 100</h3>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="footer wrapper">
+        <div class="footer__contact">
+            <a href="#home"><img src="" alt="">LOGO</a>
+            <h3>Contact</h3>
+            <p><span>Adress:</span> 123 Main Street, New York, NY 10001, USA</p>
+            <p><span>Phone:</span> (212) 555-1234</p>
+            <p><span>Hours:</span> 10:00 - 18:00 Mon - Fri</p>
+            <h3>Follow Us</h3>
+            <div class="footer__contact-follow">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+        </div>
+        <div class="footer__about">
+            <h3>About</h3>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="footer__account">
+            <h3>My Account</h3>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="footer__app">
+            <h3>Install App</h3>
+            <p>From App Store or Google Play</p>
+            <div class="footer__app-img">
+                <a href=""><img src="./img/appstore.png" alt=""></a>
+                <a href=""><img src="./img/gplay.png" alt=""></a>
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="./img/payment.jpg" alt="">
+        </div>
+        <p class="footer__copyright">&copy <span>2023</span> Copyright. All Rights Reserved</p>
+    </footer>
+    <script src=" ./js/cart.js">
+    </script>
+</body>
+
+</html>
