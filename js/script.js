@@ -2,8 +2,11 @@ const burgerIcon = document.querySelector('.nav__toggle')
 const navContener = document.querySelector('.nav__links')
 const shopItemContainer = document.querySelector('.shop__item-container')
 const navLines = document.querySelectorAll('.nav__toggle span')
+const shopRate = document.querySelector('.shop__item-rate')
+
 let onItem = false
 let allItems
+let cart = []
 
 burgerIcon.addEventListener('click', () => {
 	navContener.classList.toggle('nav-active')
@@ -17,9 +20,14 @@ async function getProducts() {
 		console.log(products)
 		displayProducts(products)
 		onHoverDisplay(products)
+		saveInStorage(products)
 	} catch (error) {
 		console.log(error)
 	}
+}
+
+const saveInStorage = products => {
+	localStorage.setItem('products', JSON.stringify(products))
 }
 
 const displayProducts = products => {
@@ -34,12 +42,8 @@ const displayProducts = products => {
 	<img src=${image} alt="" class="shop__item-img">
 	<hr>
 	<div class="shop__item-content">
-		<div class="shop__item-rate">
-			<i class="fas fa-star 
-			shop__item-rate-star"></i>
-			<i class="fas fa-star shop__item-rate-star"></i>
-			<i class="fas fa-star shop__item-rate-star"></i>
-			<i class="fas fa-star shop__item-rate-star"></i>
+	<div class="shop__item-rate">
+	${itemRateStars(rate)}
 		</div>
 		<p class="shop__item-title text-overflow">${title}</p>
 		<h4 class="shop__item-price">$ ${price}</h4>
@@ -51,24 +55,34 @@ const displayProducts = products => {
 	allItems = shopItemContainer.querySelectorAll('.shop__item')
 }
 
-const shortenTitle = text => {
-	const count = 40
-	const shortTitle = text.slice(0, count) + (text.length > count ? '...' : '')
-	return shortTitle
+const itemRateStars = rate => {
+	rate = Math.floor(rate)
+	if (rate === 1) {
+		return `<i class="fas fa-star shop__item-rate-star"></i>`
+	} else if (rate === 2) {
+		return `<i class="fas fa-star shop__item-rate-star"></i> <i class="fas fa-star shop__item-rate-star"></i>`
+	} else if (rate === 3) {
+		return `<i class="fas fa-star shop__item-rate-star"></i> <i class="fas fa-star shop__item-rate-star"></i> <i class="fas fa-star shop__item-rate-star"></i>`
+	} else if (rate === 4) {
+		return `<i class="fas fa-star shop__item-rate-star"></i> <i class="fas fa-star shop__item-rate-star"></i> <i class="fas fa-star shop__item-rate-star"></i> <i class="fas fa-star shop__item-rate-star"></i>`
+	}
 }
+
+// const shortenTitle = text => {
+// 	const count = 40
+// 	const shortTitle = text.slice(0, count) + (text.length > count ? '...' : '')
+// 	return shortTitle
+// }
 
 const onHoverDisplay = products => {
 	allItems.forEach(item => {
 		item.addEventListener('mouseenter', e => {
 			const element = e.target.children[2].children[1]
-			console.log(e.target.children[2].children[1])
 			element.classList.remove('text-overflow')
-			// displayProducts(products)
 		})
 		item.addEventListener('mouseleave', e => {
 			const element = e.target.children[2].children[1]
 			element.classList.add('text-overflow')
-			// displayProducts(products)
 		})
 	})
 }

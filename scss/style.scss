@@ -95,10 +95,27 @@ body {
 		display: flex;
 		align-items: center;
 		.nav__shopping-icon {
-			.nav__shpopping-bag {
+			position: relative;
+			.nav__shopping-bag {
 				@include links;
 				padding: 0.3em;
 				font-size: 2.7rem;
+			}
+			span {
+				display: none;
+				position: absolute;
+				top: 0;
+				right: 8%;
+				width: 15px;
+				height: 15px;
+				padding-top: 0.1em;
+				// padding: 0.5em;
+				border-radius: 50%;
+				color: white;
+				font-size: 1.4rem;
+				font-weight: bold;
+				text-align: center;
+				background-color: $color-hover;
 			}
 		}
 
@@ -503,17 +520,11 @@ body {
 		}
 	}
 	&__details {
-		* {
-			// margin: 0.3em 0;
-		}
 		&-price {
 			margin: 0.3em 0;
-			background-color: red;
 		}
 		padding: 0.3em 0;
 		&-title-price {
-			// display: flex;
-			// background-color: red;
 			p {
 				margin: 0.3em 0;
 			}
