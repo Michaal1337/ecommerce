@@ -31,13 +31,13 @@
                         <ul class="nav__links-item link-animation"><a class="link-animation" href="">News</a></ul>
                         <ul class="nav__links-item link-animation"><a class="link-animation" href="">About</a></ul>
                         <ul class="nav__links-item link-animation"><a class="link-animation" href="">Contact</a></ul>
-                        <ul class="nav__links-item basket"><a href=""><i class='bx bx-shopping-bag'></i></a>
+                        <ul class="nav__links-item cart"><a href=""><i class='bx bx-shopping-bag'></i></a>
                         </ul>
                     </ul>
                 </div>
                 <div class="nav__mobile">
                     <div class="nav__shopping-icon">
-                        <a class="nav__shopping-bag" href="basket.html"><i class='bx bx-shopping-bag'></i></a>
+                        <a class="nav__shopping-bag" href="cart.html"><i class='bx bx-shopping-bag'></i></a>
                         <span class="nav__shopping-quantity"></span>
                     </div>
                     <div class="nav__toggle">
@@ -100,23 +100,25 @@
             <p class="shop__subtitle">New Collection</p>
             <div class="shop__item-container">
 
-                <!-- <div class="shop__item">
+                <!-- <article class="shop__item">
                     <img src="./img/hangers-1280.jpg" alt="" class="shop__item-img">
                     <hr>
                     <div class="shop__item-content">
                         <div class="shop__item-rate">
-                            <i class="fas fa-star 
-                            shop__item-rate-star"></i>
-                            <i class="fas fa-star shop__item-rate-star"></i>
-                            <i class="fas fa-star shop__item-rate-star"></i>
-                            <i class="fas fa-star shop__item-rate-star"></i>
+                            ${itemRateStars(rate)}
                         </div>
                         <p class="shop__item-title">title</p>
-                        <h4 class="shop__item-price">$10</h4>
-
-                        <a href="#cart"><a href=""><i class='bx bx-shopping-bag shop__item-bag'></i></a>
+                        <div class="shop__item-bottom">
+                            <h4 class="shop__item-price">$10</h4>
+                            <div class="shop__item-quanity-box">
+                                <i class="fa-solid fa-minus" onclick="decrement(1)"></i>
+                                <span data-id=1 class="shop__item-quantity">0</span>
+                                <i class="fa-solid fa-plus" onclick="increment(1)"></i>
+                                <i class='bx bx-shopping-bag shop__item-bag'></i>
+                            </div>
+                        </div>
                     </div>
-                </div> -->
+                </article> -->
 
             </div>
         </section>
@@ -213,7 +215,7 @@
         </div>
         <p class="footer__copyright">&copy <span>2023</span> Copyright. All Rights Reserved</p>
     </footer>
-    <script type="module" src=" ./js/script.js">
+    <script src=" ./js/script.js">
     </script>
 </body>
 

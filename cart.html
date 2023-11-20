@@ -31,13 +31,13 @@
                         <ul class="nav__links-item link-animation"><a class="link-animation" href="">News</a></ul>
                         <ul class="nav__links-item link-animation"><a class="link-animation" href="">About</a></ul>
                         <ul class="nav__links-item link-animation"><a class="link-animation" href="">Contact</a></ul>
-                        <ul class="nav__links-item basket"><a href=""><i class='bx bx-shopping-bag'></i></a>
+                        <ul class="nav__links-item cart"><a href=""><i class='bx bx-shopping-bag'></i></a>
                         </ul>
                     </ul>
                 </div>
                 <div class="nav__mobile">
                     <div class="nav__shopping-icon">
-                        <a class="nav__shopping-bag" href="basket.html"><i class='bx bx-shopping-bag'></i></a>
+                        <a class="nav__shopping-bag" href="cart.html"><i class='bx bx-shopping-bag'></i></a>
                         <span class="nav__shopping-quantity"></span>
                     </div>
                     <div class="nav__toggle">
@@ -50,33 +50,35 @@
         </nav>
     </header>
     <main>
-        <section id="basket" class="basket section">
+        <section id="cart" class="cart section">
             <h2>Your products</h2>
-            <div class="basket__interface">
-                <h4 class="p">total bill:</h4>
-                <div class="basket__btns">
-                    <button class="basket__btns-checkout">Checkout</button>
-                    <button class="basket__btns-clear">Clear Cart</button>
+            <div class="cart__interface">
+                <h4 class="cart__interface-total">total bill:</h4>
+                <div class="cart__btns">
+                    <button class="cart__btns-checkout">Checkout</button>
+                    <button class="cart__btns-clear">Clear Cart</button>
                 </div>
             </div>
-            <div class="basket__products">
-                <article class="basket__item">
+            <div class="cart__products">
+
+                <!-- <article class="cart__item">
                     <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
-                    <div class="basket__details">
-                        <div class="basket__details-title-price">
+                    <div class="cart__details">
+                        <div class="cart__details-title-price">
                             <h4 class="text-overflow">title</h4>
-                            <p class="basket__details-price">$ 50</p>
+                            <p class="cart__details-price">$ 50</p>
                             <i></i>
                         </div>
-                        <div class="basket__details-btns">
+                        <div class="cart__details-btns">
                             <i class="fa-solid fa-minus" onclick="decrement()"></i>
-                            <span data-id="1" class="basket__details-quantity">0</span>
+                            <span data-id="1" class="cart__details-quantity">0</span>
                             <i class="fa-solid fa-plus" onclick="increment()"></i>
                             <i class="fa-solid fa-xmark"></i>
                         </div>
-                        <h3 class="basket__details-total">$ 100</h3>
+                        <h3 class="cart__details-total">$ 100</h3>
                     </div>
-                </article>
+                </article> -->
+
             </div>
         </section>
 
@@ -126,7 +128,7 @@
         </div>
         <p class="footer__copyright">&copy <span>2023</span> Copyright. All Rights Reserved</p>
     </footer>
-    <script type="module" src=" ./js/cart.js">
+    <script src=" ./js/cart.js">
     </script>
 </body>
 
