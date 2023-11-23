@@ -41,9 +41,7 @@ body {
 	padding: 0.5em 1em;
 	height: 8vh;
 	box-shadow: $shadow;
-	// background-color: $white2;
 	background-color: $bg-white;
-
 	z-index: 100;
 
 	// &__logo {
@@ -58,6 +56,7 @@ body {
 		justify-content: space-between;
 	}
 	&__links {
+		//zz
 		position: absolute;
 		display: flex;
 		flex-direction: column;
@@ -102,7 +101,7 @@ body {
 				font-size: 2.7rem;
 			}
 			span {
-				display: none;
+				display: block;
 				position: absolute;
 				top: 0;
 				right: 8%;
@@ -217,14 +216,15 @@ body {
 	width: 100%;
 	background-image: url('../img/store-4156934_1280.png');
 	background-size: cover;
-	background-position-y: 50%;
+	// background-position-y: 50%;
+	background-position: center;
 	color: $bg-white;
 	font-size: 2.8rem;
 	height: 30vh;
 	// background-color: $bg-color;
 	background-color: $bg-gray;
 	h3 {
-		font-size: clamp(2rem, 3vw, 4.5rem);
+		font-size: clamp(2.5rem, 5vw, 4.5rem);
 		padding: 0 0.1em;
 		text-align: center;
 		background-color: rgb(0, 0, 0, 0.4);
@@ -475,6 +475,7 @@ body {
 		margin-left: -10px;
 		border-radius: 2px;
 		white-space: nowrap;
+		cursor: pointer;
 	}
 }
 
@@ -488,7 +489,24 @@ body {
 		text-align: center;
 		padding-top: 2.5em;
 	}
+	&__empty {
+		h3 {
+			margin-top: 1em;
+		}
+		p {
+			margin-top: 0.5em;
+			font-size: 2.4rem;
+			text-align: center;
+			a {
+				text-decoration: none;
+				color: $color-hover;
+				font-weight: bold;
+			}
+		}
+	}
+
 	&__interface {
+		display: none;
 		text-align: center;
 		margin-top: 1em;
 		h4 {
@@ -545,6 +563,7 @@ body {
 		}
 	}
 	&__details {
+		width: 50%;
 		&-price {
 			margin: 0.3em 0;
 		}
@@ -572,7 +591,6 @@ body {
 
 .footer {
 	background-color: $bg-light-gray;
-	// zz
 	font-size: 1.6rem;
 	padding: 1em;
 	h3 {
@@ -668,14 +686,16 @@ body {
 		}
 	}
 	.footer {
-		//zz
 		display: flex;
-		flex-wrap: wrap;
 		width: 100%;
 		// font-size: clamp(1.6rem, 2vw, 2rem)
 		font-size: 1.8rem;
-		div {
-			width: 25%;
+		.wrapper {
+			flex-direction: row;
+			flex-wrap: wrap;
+			div {
+				width: 25%;
+			}
 		}
 		&__contact > p {
 			padding-right: 0.5em;
@@ -684,5 +704,57 @@ body {
 			width: 100%;
 			text-align: center;
 		}
+	}
+}
+
+@media (min-width: 992px) {
+	.nav {
+		max-height: 60px;
+		&__links {
+			//zz
+			position: static;
+			height: auto;
+			width: auto;
+			opacity: 1;
+			transform: translateX(0);
+			transition: none;
+
+			&-list {
+				display: flex;
+				align-items: center;
+				.cart {
+					display: block;
+				}
+			}
+			&-item {
+				position: relative;
+				margin: 0;
+				.bx-shopping-bag {
+					font-size: 2.5rem;
+				}
+				.nav__shopping-quantity {
+					// display: none;
+					position: absolute;
+					top: 0;
+					right: 8%;
+					width: 15px;
+					height: 15px;
+					padding-top: 0.1em;
+					// padding: 0.5em;
+					border-radius: 50%;
+					color: white;
+					font-size: 1.4rem;
+					font-weight: bold;
+					text-align: center;
+					background-color: $color-hover;
+				}
+			}
+		}
+		&__mobile {
+			display: none;
+		}
+	}
+	.home {
+		background-image: url('../img/woman-1920-removal.png');
 	}
 }

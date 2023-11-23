@@ -3,18 +3,11 @@ const shoppingIcon = document.querySelector('.nav__shopping-quantity')
 const cartContainer = document.querySelector('.cart__products')
 const cartTotal = document.querySelector('.cart__interface-total')
 const products = JSON.parse(localStorage.getItem('products'))
+const cartUi = document.querySelector('.cart__interface')
+const cartEmpty = document.querySelector('.cart__empty')
+const clearBtn = document.querySelector('.cart__btns-clear')
 
-const update = () => {
-	let amount = cart.map(q => q.quantity).reduce((prev, next) => prev + next, 0)
-	shoppingIcon.textContent = amount
-	if (amount > 0) {
-		shoppingIcon.style.display = 'block'
-	} else {
-		shoppingIcon.style.display = 'none'
-	}
-}
-
-const getCartProducts = () => {
+const displayCartProducts = () => {
 	cartContainer.innerHTML = cart
 		.map(item => {
 			const search = products.find(x => x.id == item.id)
@@ -39,8 +32,27 @@ const getCartProducts = () => {
     </article>`
 		})
 		.join('')
+	if (cart.length === 0) {
+		cartUi.style.display = 'none'
+		cartEmpty.style.display = 'block'
+	} else {
+		cartUi.style.display = 'block'
+		cartEmpty.style.display = 'none'
+	}
+
 	getCartItems()
 	getTotalBill()
+}
+
+const getTotalBill = () => {
+	let totalBill = 0
+	totalBill = cart
+		.map(item => {
+			const search = products.find(x => x.id == item.id)
+			return search.price * item.quantity
+		})
+		.reduce((prev, next) => prev + next, 0)
+	cartTotal.textContent = 'Total bill: $ ' + Math.round(totalBill * 100) / 100
 }
 
 const getCartItems = () => {
@@ -59,7 +71,7 @@ const getCartItems = () => {
 				const element = e.target.previousElementSibling.previousElementSibling
 				const search = cart.find(x => x.id === element.dataset.id)
 				cart = cart.filter(x => x.id !== element.dataset.id)
-				getCartProducts()
+				displayCartProducts()
 				update()
 				addToStorage()
 			}
@@ -69,11 +81,6 @@ const getCartItems = () => {
 
 const addToStorage = () => {
 	localStorage.setItem('cart', JSON.stringify(cart))
-}
-
-const getTotalBill = () => {
-	let totalBill = 0
-	cartTotal.textContent = 'Total bill: $ ' + totalBill
 }
 
 const increment = el => {
@@ -97,6 +104,17 @@ const decrement = el => {
 	}
 }
 
+const update = () => {
+	let amount = cart.map(q => q.quantity).reduce((prev, next) => prev + next, 0)
+	shoppingIcon.textContent = amount
+	if (amount > 0) {
+		shoppingIcon.style.display = 'block'
+	} else {
+		shoppingIcon.style.display = 'none'
+	}
+	getTotalBill()
+}
+
 // allCartItems.forEach(item => console.log(item))
 
 // cartProducts.addEventListener('mouseenter', e => {
@@ -108,7 +126,15 @@ const decrement = el => {
 // 	}
 // })
 
+document.addEventListener('click', e => {
+	if (e.target.matches('.cart__btns-clear')) {
+		cart = []
+		displayCartProducts()
+		addToStorage()
+		update()
+	}
+})
 document.addEventListener('DOMContentLoaded', () => {
 	update()
-	getCartProducts()
+	displayCartProducts()
 })
