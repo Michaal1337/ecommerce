@@ -2,7 +2,7 @@ const burgerIcon = document.querySelector('.nav__toggle')
 const navContener = document.querySelector('.nav__links')
 const shopItemContainer = document.querySelector('.shop__item-container')
 const navLines = document.querySelectorAll('.nav__toggle span')
-const shoppingIcon = document.querySelector('.nav__shopping-quantity')
+const shoppingIcon = document.querySelectorAll('.nav__shopping-quantity')
 let cart = JSON.parse(localStorage.getItem('cart')) || []
 let allItems
 let itemBtn
@@ -126,15 +126,17 @@ const addToStorage = products => {
 }
 
 const getFromStorage = () => {}
-
+//zz
 const update = () => {
 	let amount = cart.map(q => q.quantity).reduce((prev, next) => prev + next, 0)
-	shoppingIcon.textContent = amount
-	if (amount > 0) {
-		shoppingIcon.style.display = 'block'
-	} else {
-		shoppingIcon.style.display = 'none'
-	}
+	shoppingIcon.forEach(item => {
+		item.textContent = amount
+		if (amount > 0) {
+			item.style.display = 'block'
+		} else {
+			item.style.display = 'none'
+		}
+	})
 }
 
 const increment = el => {

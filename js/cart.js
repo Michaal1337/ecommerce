@@ -1,5 +1,5 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || []
-const shoppingIcon = document.querySelector('.nav__shopping-quantity')
+const shoppingIcon = document.querySelectorAll('.nav__shopping-quantity')
 const cartContainer = document.querySelector('.cart__products')
 const cartTotal = document.querySelector('.cart__interface-total')
 const products = JSON.parse(localStorage.getItem('products'))
@@ -106,12 +106,15 @@ const decrement = el => {
 
 const update = () => {
 	let amount = cart.map(q => q.quantity).reduce((prev, next) => prev + next, 0)
-	shoppingIcon.textContent = amount
-	if (amount > 0) {
-		shoppingIcon.style.display = 'block'
-	} else {
-		shoppingIcon.style.display = 'none'
-	}
+	shoppingIcon.forEach(item => {
+		item.textContent = amount
+		if (amount > 0) {
+			item.style.display = 'block'
+		} else {
+			item.style.display = 'none'
+		}
+	})
+
 	getTotalBill()
 }
 

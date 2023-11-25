@@ -13,13 +13,11 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
-	// scroll-padding-top: 50px;
 }
 
 body {
 	font-family: 'League Spartan', sans-serif;
 	overflow-x: hidden;
-	// background-color: $main-color-gray;
 	background-color: $bg-white;
 	color: $main-color-dark;
 }
@@ -44,9 +42,6 @@ body {
 	background-color: $bg-white;
 	z-index: 100;
 
-	// &__logo {
-	// 	// color: white;
-	// }
 	.nav-active {
 		opacity: 1;
 		transform: translateX(0);
@@ -54,6 +49,9 @@ body {
 	.wrapper {
 		display: flex;
 		justify-content: space-between;
+	}
+	&__logo {
+		width: 200px;
 	}
 	&__links {
 		//zz
@@ -108,7 +106,6 @@ body {
 				width: 15px;
 				height: 15px;
 				padding-top: 0.1em;
-				// padding: 0.5em;
 				border-radius: 50%;
 				color: white;
 				font-size: 1.4rem;
@@ -152,7 +149,6 @@ body {
 	background-color: $bg-white;
 	height: 100vh;
 	background-image: url('../img/woman-1280-remove.png');
-	// background-image: url('../img/shopping-mall-1280.jpg');
 	background-size: cover;
 	background-position: center;
 	.wrapper {
@@ -162,10 +158,6 @@ body {
 
 	&__title {
 		position: absolute;
-		// display: flex;
-		// flex-direction: column;
-		// justify-content: flex-end;
-		// align-items: center;
 		right: 5%;
 		top: 15%;
 		max-width: 60%;
@@ -186,24 +178,6 @@ body {
 		& > * {
 			margin-top: 0.3em;
 		}
-
-		// button {
-		// 	font-family: 'League Spartan', sans-serif;
-		// 	font-size: 2rem;
-		// 	font-weight: 600;
-		// 	margin-top: 0.8em;
-		// 	padding: 0.5em 0.8em;
-		// 	border: 3px solid black;
-		// 	background-color: transparent;
-		// 	outline: none;
-		// 	transition: color 0.3s, border 0.3s;
-		// 	cursor: pointer;
-
-		// 	&:hover {
-		// 		color: $color-hover;
-		// 		border: 3px solid $color-hover;
-		// 	}
-		// }
 	}
 }
 
@@ -216,12 +190,10 @@ body {
 	width: 100%;
 	background-image: url('../img/store-4156934_1280.png');
 	background-size: cover;
-	// background-position-y: 50%;
 	background-position: center;
 	color: $bg-white;
 	font-size: 2.8rem;
 	height: 30vh;
-	// background-color: $bg-color;
 	background-color: $bg-gray;
 	h3 {
 		font-size: clamp(2.5rem, 5vw, 4.5rem);
@@ -229,14 +201,6 @@ body {
 		text-align: center;
 		background-color: rgb(0, 0, 0, 0.4);
 	}
-	// &__bg {
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	background-color: rgba(0, 0, 0, 0.333);
-	// }
 	&__item {
 		display: flex;
 		flex-direction: column;
@@ -253,8 +217,6 @@ body {
 			margin-top: 0.5em;
 		}
 	}
-	// i {
-	// }
 }
 .shop {
 	font-size: 2.5rem;
@@ -272,12 +234,10 @@ body {
 
 	hr {
 		margin: 0.5em 0.2em;
-		// width: 90%;
 	}
 	&__item-container {
 		display: flex;
 		flex-wrap: wrap;
-		// text-align: center;
 		justify-content: center;
 		gap: 1em;
 
@@ -306,7 +266,6 @@ body {
 			}
 			&-title {
 				margin: 0.3em 0;
-				// color: $main-color-gray;
 				color: $main-color-dark;
 			}
 			&-rate {
@@ -319,13 +278,11 @@ body {
 			}
 			&-price {
 				color: $color-hover;
-				// align-self: flex-end;
 			}
 			&-quanity-box {
 				font-size: 2rem;
 				display: flex;
 				align-items: center;
-				// margin-bottom: .3em;
 				.fa-solid {
 					cursor: pointer;
 				}
@@ -339,9 +296,6 @@ body {
 				margin: 0 0.2em;
 			}
 			&-bag {
-				// position: absolute;
-				// bottom: 5%;
-				// right: 0;
 				color: $color-hover;
 				background-color: rgba(0, 145, 197, 0.19);
 				border-radius: 50%;
@@ -360,7 +314,6 @@ body {
 }
 
 .news {
-	// height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -371,11 +324,8 @@ body {
 		justify-content: center;
 		font-size: 1.6rem;
 		font-size: clamp(1.8rem, 2.5vw, 2rem);
-		// position: relative;
 		color: $bg-white;
 		height: 200px;
-		// max-width: 370px;
-		// width: 85vw;
 		margin: 1em 0;
 		padding: 1em;
 		transition: scale 0.3s;
@@ -402,7 +352,6 @@ body {
 
 	&__content-top {
 		width: 100%;
-		// height: 50vh;
 
 		h5 {
 			color: rgb(0, 255, 234);
@@ -436,11 +385,7 @@ body {
 }
 
 .newsletter {
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: center;
 	align-items: center;
-	// background-color: rgb(18, 15, 142);
 	background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/city-1280.jpg);
 	background-size: cover;
 	background-position: center;
@@ -482,7 +427,6 @@ body {
 .cart {
 	display: flex;
 	flex-direction: column;
-	// justify-content: center;
 	align-items: center;
 	font-size: 2rem;
 	h2 {
@@ -544,7 +488,6 @@ body {
 		display: flex;
 		gap: 0 0.5em;
 		width: 270px;
-		// height: 130px;
 		margin: 1em 0;
 		padding: 0.3em;
 		border: 1px solid $bg-light-gray;
@@ -614,6 +557,12 @@ body {
 	a:hover {
 		color: black;
 	}
+
+	&__contact {
+		a img {
+			width: 100px;
+		}
+	}
 	.footer__contact-follow {
 		display: flex;
 		flex-direction: row;
@@ -624,7 +573,6 @@ body {
 	.footer__app {
 		img {
 			width: 150px;
-			// height: 50px;
 		}
 	}
 	.footer__copyright {
@@ -636,10 +584,18 @@ body {
 }
 
 @media (min-width: 576px) {
-	// .news {
-	// 	.news__content-item {
-	// 		// flex-direction: row;
-	// 	}
+	.cart {
+		&__products {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 1em;
+			margin: 1em auto;
+		}
+		&__item {
+			margin: 0;
+		}
+	}
 	.news__content-top {
 		.top {
 			display: block;
@@ -647,34 +603,23 @@ body {
 			height: 250px;
 			padding: 1em 0 0 1em;
 			h5 {
-				// margin: 1em;
 				font-size: 2.3rem;
-				// padding: 1em;
 			}
 			h3 {
-				// margin: 1em;
 				font-size: 2.8rem;
 			}
 		}
 	}
-	// .news__content-bottom {
-	// 	display: flex;
-	// 	gap: .5em;
-	// }
-	// }
 }
 
 @media (min-width: 768px) {
 	.news__content-top {
 		display: flex;
-		// justify-content: center;
 		gap: 0.5em;
 		flex-wrap: wrap;
 		width: 100%;
 		.top {
-			// min-width: 370px;
 			width: 49%;
-			// max-width: 430px;
 		}
 	}
 	.news__content-bottom {
@@ -685,10 +630,10 @@ body {
 			width: 33%;
 		}
 	}
+
 	.footer {
 		display: flex;
 		width: 100%;
-		// font-size: clamp(1.6rem, 2vw, 2rem)
 		font-size: 1.8rem;
 		.wrapper {
 			flex-direction: row;
@@ -733,14 +678,12 @@ body {
 					font-size: 2.5rem;
 				}
 				.nav__shopping-quantity {
-					// display: none;
 					position: absolute;
 					top: 0;
 					right: 8%;
 					width: 15px;
 					height: 15px;
 					padding-top: 0.1em;
-					// padding: 0.5em;
 					border-radius: 50%;
 					color: white;
 					font-size: 1.4rem;

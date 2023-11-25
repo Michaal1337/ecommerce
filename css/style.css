@@ -10,7 +10,7 @@
 }
 
 .section-span {
-  color: rgb(0, 146, 197);
+  color: #0092c5;
 }
 
 .section {
@@ -25,7 +25,7 @@
   left: 0;
   height: 1.5px;
   width: 100%;
-  background-color: rgb(0, 146, 197);
+  background-color: #0092c5;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease-in;
@@ -49,8 +49,8 @@
   cursor: pointer;
 }
 .btn:hover {
-  color: rgb(0, 146, 197);
-  border: 3px solid rgb(0, 146, 197);
+  color: #0092c5;
+  border: 3px solid #0092c5;
 }
 
 .text-overflow {
@@ -131,6 +131,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.nav__logo {
+  width: 200px;
+}
 .nav__links {
   position: absolute;
   display: flex;
@@ -157,7 +160,7 @@ body {
   margin: 3em 0;
 }
 .nav__links-item .link-active {
-  color: rgb(0, 146, 197);
+  color: #0092c5;
 }
 .nav__links-item a {
   text-decoration: none;
@@ -166,7 +169,7 @@ body {
   transition: color 0.3s;
 }
 .nav__links-item a:hover {
-  color: rgb(0, 146, 197);
+  color: #0092c5;
 }
 .nav__mobile {
   display: flex;
@@ -184,7 +187,7 @@ body {
   font-size: 2.7rem;
 }
 .nav__mobile .nav__shopping-icon .nav__shopping-bag:hover {
-  color: rgb(0, 146, 197);
+  color: #0092c5;
 }
 .nav__mobile .nav__shopping-icon span {
   display: block;
@@ -199,7 +202,7 @@ body {
   font-size: 1.4rem;
   font-weight: bold;
   text-align: center;
-  background-color: rgb(0, 146, 197);
+  background-color: #0092c5;
 }
 .nav__mobile .nav__toggle {
   cursor: pointer;
@@ -213,7 +216,7 @@ body {
   transition: all 0.3s;
 }
 .nav__mobile .nav__toggle .active-line {
-  background-color: rgb(0, 146, 197);
+  background-color: #0092c5;
 }
 .nav__mobile .nav__toggle .active-line:nth-child(1) {
   transform-origin: center right;
@@ -251,7 +254,7 @@ body {
   text-align: center;
 }
 .home__title h1 {
-  color: rgb(0, 146, 197);
+  color: #0092c5;
 }
 .home__title h4 {
   color: #333;
@@ -360,7 +363,7 @@ body {
   align-items: center;
 }
 .shop__item-container .shop__item-price {
-  color: rgb(0, 146, 197);
+  color: #0092c5;
 }
 .shop__item-container .shop__item-quanity-box {
   font-size: 2rem;
@@ -379,7 +382,7 @@ body {
   margin: 0 0.2em;
 }
 .shop__item-container .shop__item-bag {
-  color: rgb(0, 146, 197);
+  color: #0092c5;
   background-color: rgba(0, 145, 197, 0.19);
   border-radius: 50%;
   padding: 0.3em;
@@ -413,9 +416,9 @@ body {
   cursor: pointer;
 }
 .news .news__content-item:hover > .btn {
-  background-color: rgb(0, 146, 197);
+  background-color: #0092c5;
   color: #f9fcff;
-  border: 3px solid rgb(0, 146, 197);
+  border: 3px solid #0092c5;
 }
 .news .news__content-item button {
   width: 92px;
@@ -485,7 +488,7 @@ body {
   margin: 0.7em 0;
 }
 .newsletter span {
-  color: rgb(0, 146, 197);
+  color: #0092c5;
 }
 .newsletter form {
   display: flex;
@@ -498,7 +501,7 @@ body {
   outline: none;
 }
 .newsletter button {
-  background-color: rgb(0, 146, 197);
+  background-color: #0092c5;
   font-weight: 700;
   color: #f9fcff;
   border: none;
@@ -529,7 +532,7 @@ body {
 }
 .cart__empty p a {
   text-decoration: none;
-  color: rgb(0, 146, 197);
+  color: #0092c5;
   font-weight: bold;
 }
 .cart__interface {
@@ -542,7 +545,7 @@ body {
 }
 .cart__btns-checkout, .cart__btns-clear {
   padding: 0.6em 1.2em;
-  background-color: rgb(0, 146, 197);
+  background-color: #0092c5;
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -632,6 +635,9 @@ body {
 .footer a:hover {
   color: black;
 }
+.footer__contact a img {
+  width: 100px;
+}
 .footer .footer__contact-follow {
   display: flex;
   flex-direction: row;
@@ -650,6 +656,16 @@ body {
 }
 
 @media (min-width: 576px) {
+  .cart__products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin: 1em auto;
+  }
+  .cart__item {
+    margin: 0;
+  }
   .news__content-top .top {
     display: block;
     padding: 0;
@@ -739,7 +755,7 @@ body {
     font-size: 1.4rem;
     font-weight: bold;
     text-align: center;
-    background-color: rgb(0, 146, 197);
+    background-color: #0092c5;
   }
   .nav__mobile {
     display: none;
